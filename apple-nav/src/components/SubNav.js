@@ -5,7 +5,7 @@ export default class SubNav extends Component {
     render() {
         return(
             <div className="sub-nav">
-                {this.props.devicesData["macData"].map((device, index) => {
+                {this.props.deviceTypeData[`${this.props.device}Data`].map((device, index) => {
                     return(
                     <div className="devices" key={index} >
                         <img src={device.icon} alt={device.name} />

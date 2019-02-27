@@ -7,12 +7,11 @@ export default class Nav extends Component {
         return(
             <nav>
                 <Link to="/" >Mac</Link>
-                {/* <Link to="/" onClick={} >iPad</Link>
-                <Link to="/" onClick={} >iPhone</Link>
-                <Link to="/" onClick={} >Watch</Link>
-                <Link to="/" onClick={} >TV</Link>
-                <Link to="/" onClick={} >Music</Link>
-                <Link to="/" onClick={} >Support</Link> */}
+                <Link to="/ipad" onClick={e => {this.props.deviceTypeClick(e, "ipadData")} }>iPad</Link>
+                <Link to="/iphone" onClick={e => {this.props.deviceTypeClick(e, "iphoneData")} }>iPhone</Link>
+                <Link to="/watch" onClick={e => {this.props.deviceTypeClick(e, "watchData")} }>Watch</Link>
+                <Link to="/tv" onClick={e => {this.props.deviceTypeClick(e, "tvData")} }>TV</Link>
+                <Link to="/music" onClick={e => {this.props.deviceTypeClick(e, "musicData")} }>Music</Link>
             </nav>
         );
     }

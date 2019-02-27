@@ -7,16 +7,25 @@ export default class NavWrapper extends Component {
         super(props);
         this.state = {
             ...this.props,
-            device: ''
+            device: 'macData'
         }
+    }
+
+    deviceTypeClick = (e, deviceType) => {
+        e.preventDefault();
+        this.setState({
+            ...this.state,
+            device: deviceType
+        });
     }
 
 
     render() {
+        const deviceData = this.state.devicesData[this.state.device];
         return(
             <div className="nav-wrapper">
-                <Nav />
-                <SubNav devicesData={this.state.devicesData}/>
+                <Nav deviceTypeClick={this.deviceTypeClick} />
+                <SubNav device={this.state.device} deviceTypeData={deviceData}/>
             </div>
         );
     }

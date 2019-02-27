@@ -11,7 +11,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Route exact path="/" render={() => <NavWrapper devices={devices} devicesData={Data} /> } />
+        <Route path="/" render={() => <NavWrapper devices={devices} devicesData={Data} /> } />
       </div>
     );
   }
